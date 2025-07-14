@@ -1,0 +1,21 @@
+ALGORITHM inst
+VAR
+    ch=STRING
+    i=INTEGER:=0
+    ln=INTEGER:=0
+    nbr=INTEGER:=0
+    voy=INTEGER:=0
+BEGIN
+    write("donner la phrase");read(ch)
+    ln=ch.length
+    FOR i FROM 0 TO ln-1 STEP step  DO
+        IF (ch[i]==" "or ch[i]==".") THEN
+            nbr=nbr+1
+        ELSE_IF (ch[i]=="a" or ch[i]=="e" or ch[i]=="i" or ch[i]=="o" or ch[i]=="u" or ch[i]=="y") THEN
+            voy=voy+1
+        END_IF
+    END_FOR
+    write(ln)
+    write(nbr)
+    write(voy)
+END
